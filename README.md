@@ -54,7 +54,7 @@ The proposed heuristic tree transformation can be assessed by running:
 python test_without_us.py
 ```
 
-- The baselines contain a brute force search algorithm, random tree search algorithm, and genetic algorithm that can be evaluated by applying:
+- The baselines contain a brute force search algorithm, random tree search algorithm, and genetic algorithm that can be respectively evaluated by applying:
 
 ```Python
 python brute_force.py
