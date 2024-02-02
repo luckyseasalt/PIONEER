@@ -38,7 +38,7 @@ import math
 import numpy as np
 ###########
 
-device = torch.device("cuda:"+str(3) if torch.cuda.is_available() else "cpu") # GPU编号
+device = torch.device("cuda:"+str(3) if torch.cuda.is_available() else "cpu") 
 
 def total_var(x, edge_index, batch, undirected = True):
     row, col = edge_index
@@ -55,7 +55,7 @@ class ELECT_Mnist(torch.nn.Module):
         super(ELECT_Mnist, self).__init__()
         self.hidden1 = hidden1
         self.hidden2 = hidden2
-        self.momentum = 0.1 # 动量参数，一般为0.1，0.01， 0.001
+        self.momentum = 0.1
         self.convs = torch.nn.ModuleList()
         self.deltas = deltas
         self.numlayers = num_layers
@@ -156,21 +156,16 @@ class ELECT_Mnist(torch.nn.Module):
             
         probs = x
 
-        # 计算成本f的准备：
         pairwise_prodsums = torch.zeros(num_graphs, device = device)
         gamma = edge_batch_index.bincount(minlength=data.num_graphs)/2 
-        # gamma = torch.zeros(num_graphs, device = device)
-        # pairwise_square = torch.square(probs[row] - probs[col]) * data.edge_attr.reshape(-1,1) # wij*(xi-xj)^2
+
         pairwise_square = torch.square(probs[row] - probs[col]) # (xi-xj)^2 
        
-        # adj = to_dense_adj(edge_index, batch) 
-        # adj_new = adj.clone()
+
         lamma = torch.zeros(num_graphs, device = device) 
         aaa = torch.zeros(num_graphs, device = device) 
         alpha = torch.ones(num_graphs, device = device) 
-        # # bbb = torch.zeros(num_graphs, device = device) 
-        # max_node = 0
-        # weight = torch.zeros(num_graphs, device = device)
+
         for graph in range(num_graphs): 
             batch_graph = (edge_batch_index==graph)
             batch_node = (batch==graph)
@@ -187,7 +182,6 @@ class ELECT_Mnist(torch.nn.Module):
 
             aaa[graph] = torch.log(tensor(0.0001))/(-eigenvalues0[2]) 
 
-            # 新图特征值
             adj_change = ((1 - probs[batch_node].unsqueeze(0)- probs[batch_node].unsqueeze(1)) ** 2).squeeze(-1)
             adj_new = torch.mul(adj_change, adj)  
             laplacian = torch.diag(adj_new.sum(dim=-1)) - adj_new
