@@ -3,9 +3,11 @@ The official implementation of the paper “An Unsupervised Learning Framework C
 
 
 ## Datasets
-We mainly use the three real-world datasets and synthetic datasets in this study.
+We mainly use real-world datasets and synthetic datasets in this study.
 
 **Real-world Datasets**
+
+The real-world datasets mainly contain the following three datasets.
 
 * [ENZYMES](https://paperswithcode.com/dataset/enzymes)
 
