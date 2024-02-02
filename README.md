@@ -29,6 +29,39 @@ Enter './build_dataset', run
 python build_data.py
 ```
 
+# Usage
+To evaluate the PIONEER no the real-world datasets, run
+
+```Python
+python main.py
+```
+
+To further assess the the PIONEER no the synthetic datasets, enter './train_atheta' and use the following command to train:
+
+```Python
+python train.py
+```
+
+Then, run the following command to test:
+
+```Python
+python test.py
+```
+
+The baselines contain brute force search algorithm, random tree search algorithm, and genetic algorithm can be evaluated by applying:
+
+```Python
+python brute_force.py
+```
+
+```Python
+python random_tree.py
+```
+
+```Python
+python test_ga.py
+```
+
 # Environment Requirements
 The following packages are required to install to implement our code:
 ```shell
