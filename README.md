@@ -30,13 +30,13 @@ python build_data.py
 ```
 
 # Usage
-To evaluate the PIONEER no the real-world datasets, run
+- To evaluate the PIONEER on the real-world datasets, run
 
 ```Python
 python main.py
 ```
 
-To further assess the the PIONEER no the synthetic datasets, enter './train_atheta' and use the following command to train:
+- To further assess the PIONEER on the synthetic datasets, enter './train_atheta' and use the following command to train:
 
 ```Python
 python train.py
@@ -48,7 +48,13 @@ Then, run the following command to test:
 python test.py
 ```
 
-The baselines contain brute force search algorithm, random tree search algorithm, and genetic algorithm can be evaluated by applying:
+The proposed heuristic tree transformation can be assessed by running:
+
+```Python
+python test_without_us.py
+```
+
+- The baselines contain a brute force search algorithm, random tree search algorithm, and genetic algorithm that can be evaluated by applying:
 
 ```Python
 python brute_force.py
