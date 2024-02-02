@@ -1,0 +1,7 @@
+# Here replace the XXX with your own path! (Absolute path preferred)
+data:
+    target_path: XXX
+    splits:
+        train: 0.8
+        valid: 0.1
+        test: 0.1
