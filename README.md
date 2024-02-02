@@ -15,6 +15,18 @@ We mainly use the three real-world datasets and synthetic datasets in this study
 
 **Synthetic Datasets**
 
+The synthetic datasets utilize the images in the [Mnist](http://yann.lecun.com/exdb/mnist/) dataset.
+
+- To generate the synthetic datasets:
+
+Fill in the path that you would like to put the data in './build_dataset/configs/config'.
+
+Enter './build_dataset', run
+
+```Python
+python build_data.py
+```
+
 # Environment Requirements
 The following packages are required to install to implement our code:
 ```shell
