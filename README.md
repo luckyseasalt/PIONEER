@@ -3,7 +3,6 @@ The official implementation of the paper “An Unsupervised Learning Framework C
 
 
 ## Datasets
-We mainly use real-world datasets and synthetic datasets in this study.
 
 **Real-world Datasets**
 
