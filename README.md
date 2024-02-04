@@ -35,13 +35,13 @@ python build_data.py
 python main.py
 ```
 
-- To further assess the PIONEER on the synthetic datasets, enter './train_atheta' and use the following command to train:
+- To further assess the PIONEER on the synthetic datasets, enter './train_atheta' and use the following command to train the unsupervised solver:
 
 ```Python
 python train.py
 ```
 
-Then, run the following command to test:
+Then, run the following command to test PIONEER:
 
 ```Python
 python test.py
