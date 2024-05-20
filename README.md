@@ -1,5 +1,5 @@
 # KDD2024 - An Unsupervised Learning Framework Combined with Heuristics (PIONEER) for the Maximum Minimal Cut Problem (MMCP)
-The official implementation of the paper “An Unsupervised Learning Framework Combined with Heuristics for the Maximum Minimal Cut Problem”.
+The official implementation of the paper “An Unsupervised Learning Framework Combined with Heuristics for the Maximum Minimal Cut Problem” in KDD 2024 (Research Track).
 
 
 ## Datasets
